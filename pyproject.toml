@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "esp32-test-stubs"
+version = "0.1.2"
+description = "Sample project for PEP-561 distribution testing"
+authors = ["mrkeuz <mrkeuz@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/mrkeuz/esp32-test-stubs"
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+]
+
+packages = [
+     { include = "uuid-stubs" },
+     { include = "esp32-stubs" },
+     { include = "esp-stubs" },
+     { include = "*.pyi" , from = "src"},
+     { include = "*.pyi" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

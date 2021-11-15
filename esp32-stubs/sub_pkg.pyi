@@ -1,0 +1,3 @@
+from typing import Any
+
+def sub_pkg_function(*arg) -> Any: ...
