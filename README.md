@@ -1,10 +1,9 @@
 esp32-test-stubs
 ================
 
-Sample project for test [PEP-561][1]
+Sample PoC of PyPi packaging [PEP-561][1] stubs for Micropython Esp32. 
 
-Notice: It is only "proof-of-concept" of [PEP-561][1] package so **not for production use**, 
-package can be deleted in the future. 
+As it is only "proof-of-concept" it NOT assumed to for production use and package can be deleted in the future. 
 
 ## Installation
 
@@ -13,6 +12,8 @@ pip3 install esp32-test-stubs
 ```
 
 ## Script
+
+Next script correct working in PyCharm with installed stub package via standart `pip` command:
 
 ```python
 import machine
@@ -43,15 +44,13 @@ upip.cleanup()
 
 ## Stubs possible locations
 
-- project root `*.pyi` files
-- `<package>-stubs` with `__init__.pyi` see [PEP-561](https://www.python.org/dev/peps/pep-0561)
-- `<package>-stubs/<sub_package>.pyi` see [stub-only-packages](https://www.python.org/dev/peps/pep-0561/#stub-only-packages)
-- custom folder like `src`, marked as `package = [{ include = "*.pyi" , from = "src"}]`,
-  under hood all `*.pyi` will be moved into package root during package build.  
-  CONS: **Not recommended** as custom folder does not recognize as stub source before stub package will pack properly. 
-  Also in `*.tar.gz` stubs not moved properly, so it led to potential errors during stub recognition   
+- Project root `*.pyi` files
+- `<package>-stubs` with `__init__.pyi` (see [stub-only packages][2])
+- `<package>-stubs/<sub_package>.pyi` (see [stub-only-packages][2])
+- "custom folders" (**Not recommended**) - like `src`, marked as `package = [{ include = "*.pyi" , from = "src"}]`, under hood all `*.pyi`
+  will be moved into package root during package build. **CONS** for this method is folder does not recognize as stub source before stub package  will pack properly.  Also in `*.tar.gz` stubs not moved properly, so it led to potential errors during stub recognition from pure sources.
 
-Note all of these variants should be explicitly marked in `pyproject.toml` in `Poetry` see `package` section
+Note: all of these variants should be explicitly marked in `pyproject.toml` in `Poetry` (see `package` section `pyproject.toml`)
 
 ## Poetry commands
 
@@ -71,7 +70,7 @@ Note all of these variants should be explicitly marked in `pyproject.toml` in `P
   ```
 
 ## Links
-
+- [PEP-484 - Type Hints, Stub Files ](https://peps.python.org/pep-0484/#stub-files)
 - [PEP-561](https://www.python.org/dev/peps/pep-0561)
 - [Real world stubs example (Numpy)](https://github.com/numpy/numpy-stubs)
 - [Poetry stub-only project examples](https://github.com/python-poetry/poetry/tree/master/tests/masonry/builders/fixtures/pep_561_stub_only)
@@ -79,3 +78,4 @@ Note all of these variants should be explicitly marked in `pyproject.toml` in `P
 
 #### Footnotes
 [1]: https://www.python.org/dev/peps/pep-0561
+[2]: https://peps.python.org/pep-0561/#stub-only-packages
