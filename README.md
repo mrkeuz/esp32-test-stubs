@@ -74,7 +74,7 @@ Note all of these variants should be explicitly marked in `pyproject.toml` in `P
 
 - [PEP-561](https://www.python.org/dev/peps/pep-0561)
 - [Real world stubs example (Numpy)](https://github.com/numpy/numpy-stubs)
-- [Poetry project examples](https://github.com/python-poetry/poetry/tree/master/tests/masonry/builders/fixtures/pep_561_stub_only)
+- [Poetry stub-only project examples](https://github.com/python-poetry/poetry/tree/master/tests/masonry/builders/fixtures/pep_561_stub_only)
 
 #### Footnotes
 [1]: https://www.python.org/dev/peps/pep-0561
