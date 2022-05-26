@@ -75,6 +75,7 @@ Note all of these variants should be explicitly marked in `pyproject.toml` in `P
 - [PEP-561](https://www.python.org/dev/peps/pep-0561)
 - [Real world stubs example (Numpy)](https://github.com/numpy/numpy-stubs)
 - [Poetry stub-only project examples](https://github.com/python-poetry/poetry/tree/master/tests/masonry/builders/fixtures/pep_561_stub_only)
+- [mypy.stubtest](https://mypy.readthedocs.io/en/latest/stubtest.html) - tool for validate stubs files against implementaion ([info](https://stackoverflow.com/questions/51716200/how-do-you-check-if-a-typeshed-stub-pyi-file-matches-the-implementation)) 
 
 #### Footnotes
 [1]: https://www.python.org/dev/peps/pep-0561
