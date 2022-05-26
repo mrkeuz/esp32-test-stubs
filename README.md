@@ -35,7 +35,7 @@ import uuid
 uuid.uuid4()
 
 # Points to stub (mean partial stub, so extent stdlib)
-# see uuid-stubs and py.typed
+# (see uuid-stubs and py.typed)
 uuid.uuid6()
 
 import upip
