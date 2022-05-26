@@ -13,7 +13,7 @@ pip3 install esp32-test-stubs
 
 ## Script
 
-Next script correct working in PyCharm with installed stub package via standart `pip` command:
+Next script correct working in PyCharm for autocompete and analyzing with only installed stub package via standart `pip` command. All types does not show any warnings and recognized properly:
 
 ```python
 import machine
