@@ -4,6 +4,7 @@ esp32-test-stubs
 Sample PoC of PyPi packaging [PEP-561][1] stubs for Micropython Esp32. 
 
 As it is only "proof-of-concept" it NOT assumed to for production use and package can be deleted in the future. 
+Another purspose of this project is collect info about stubbing
 
 ## Installation
 
@@ -68,6 +69,10 @@ Note: all of these variants should be explicitly marked in `pyproject.toml` in `
   poetry publish --build -r testpypi
   poetry publish --build -r pypi
   ```
+## Stub lib examples
+
+- [PyCharm Micropython plugin stubs](https://github.com/vlasovskikh/intellij-micropython/tree/master/typehints)
+- [Brython stubs]
 
 ## Links
 - [PEP-484 - Type Hints, Stub Files ](https://peps.python.org/pep-0484/#stub-files)
@@ -76,7 +81,8 @@ Note: all of these variants should be explicitly marked in `pyproject.toml` in `
 - [Poetry stub-only project examples](https://github.com/python-poetry/poetry/tree/master/tests/masonry/builders/fixtures/pep_561_stub_only)
 - [stubgen](https://mypy.readthedocs.io/en/stable/stubgen.html) - generate stubs from code
 - [stubtest](https://mypy.readthedocs.io/en/latest/stubtest.html) - tool for validate stubs files against implementaion ([info](https://stackoverflow.com/questions/51716200/how-do-you-check-if-a-typeshed-stub-pyi-file-matches-the-implementation)) 
-
+- [merge-pyi](https://github.com/google/pytype/tree/main/pytype/tools/merge_pyi) - merge `pyi` types to `py` files
+- [tools for stubbing](https://github.com/typeddjango/awesome-python-typing#working-with-types) - list of tools for working with stubs
 
 #### Footnotes
 [1]: https://www.python.org/dev/peps/pep-0561
