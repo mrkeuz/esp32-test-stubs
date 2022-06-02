@@ -72,7 +72,7 @@ Note: all of these variants should be explicitly marked in `pyproject.toml` in `
 ## Stub lib examples
 
 - [PyCharm Micropython plugin stubs](https://github.com/vlasovskikh/intellij-micropython/tree/master/typehints)
-- [Brython stubs]
+- [Brython stubs](https://github.com/Real-Gecko/brython-stubs)
 
 ## Links
 - [PEP-484 - Type Hints, Stub Files ](https://peps.python.org/pep-0484/#stub-files)
