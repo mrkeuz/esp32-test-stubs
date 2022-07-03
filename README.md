@@ -49,7 +49,10 @@ upip.cleanup()
 - `<package>-stubs` with `__init__.pyi` (see [stub-only packages][2])
 - `<package>-stubs/<sub_package>.pyi` (see [stub-only-packages][2])
 - "custom folders" (**Not recommended**) - like `src`, marked as `package = [{ include = "*.pyi" , from = "src"}]`, under hood all `*.pyi`
-  will be moved into package root during package build. **CONS** for this method is folder does not recognize as stub source before stub package  will pack properly.  Also in `*.tar.gz` stubs not moved properly, so it led to potential errors during stub recognition from pure sources.
+  will be moved into package root during package build.  
+  **CONS**: 
+    - "custom folders" does not recognize as stub source before stub package will pack properly. 
+    -  stubs not moved properly in in target `*.tar.gz` build, so it led to potential errors during stub recognition from pure sources.
 
 Note: all of these variants should be explicitly marked in `pyproject.toml` in `Poetry` (see `package` section `pyproject.toml`)
 
