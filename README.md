@@ -6,6 +6,13 @@ Sample PoC of PyPi packaging [PEP-561][1] stubs for Micropython Esp32.
 As it is only "proof-of-concept" it NOT assumed to for production use and package can be deleted in the future. 
 Another purspose of this project is collect info about stubbing
 
+For the production implementation please see:
+ - https://pypi.org/project/micropython-esp32-stubs
+ - https://pypi.org/project/micropython-esp8266-stubs
+ - https://pypi.org/project/micropython-stm32-stubs
+ - https://pypi.org/project/micropython-rp2-stubs
+ - **https://github.com/Josverl/micropython-stubs**
+
 ## Installation
 
 ```shell 
